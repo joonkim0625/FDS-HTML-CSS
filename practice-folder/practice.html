@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>웹카페</title>
-  <link rel="shortcut icon" href="/images/common/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/images/common/webcafe.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- 레이아웃 .. width가 940px인 컨테이너를 가운데에 위치한 상태 -->
+  <div class="container">
+
+    <header class="header">헤더</header>
+    <div class="visual">비주얼</div>
+    <main class="main">메인
+
+      <div class="group1">group1</div>
+      <div class="group2">group2</div>
+      <div class="group3">group3</div>
+
+    </main>
+
+    <!-- 문법 검사 시에 아티클안에 헤더가 없다고 나오니 h2를 설정해주고 css로 처리해주자 -->
+    <article class="slogan">
+      <h2>
+        슬로건
+      </h2>
+    </article>
 
 
-  
+    <div class="footer-bg">
+      <footer class="footer">푸터</footer>
+    </div>
+
+
+
+
+
+
+
+  </div>
+
+
+
 </body>
-</html>
 
+</html>
