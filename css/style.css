@@ -103,6 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 /* footer */
 
 
+/* 푸터-백그라운드를 씌움으로써, user agent style에 의한 display: block 효과로 인해 .footer가 전체화면 크기의 width를 가지게 한다 */
 .footer-bg {
   background-color: purple;
 }
