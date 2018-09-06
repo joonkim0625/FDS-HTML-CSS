@@ -1,1 +1,117 @@
 /* CSS를 활용한 레이아웃 및 UI 디자인 */
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* 레이아웃 */
+.container {
+  background-color: #aaa; 
+  height: 100vh;
+  
+  /* 가운데 정렬을 위한 trick */
+  /* border-width: 10px;
+  border-style: solid;
+  border-color: red; */
+  
+  /* 첫번 째 값은 위아래, 두번 째 값은 좌우 : 안쪽에 여백을 준 것 */
+  /* padding: 0 50px; */
+  /* 마진은 투명하다. 실제 크기가 커졌지만 보이지 않기 때문에 이동했다고 착각함.
+  그래서 오토 값을 주면 뷰포트 값을 기준으로 남는 여백의 수치를 절반으로 나누어 좌우에 값을 준다. 그렇기 때문에 가운데 정렬은 아니지만 가운데에 위치하게 된다. */
+  /* 값을 4개 주면 시계 방향으로 위 오른쪽 아래 왼쪽 */
+  /* margin: 0 0 0 auto; */
+  
+  
+  
+  
+}
+
+.header, .visual, .main, .slogan, .footer {
+  /* 컨테이너 안의 위드 마진을 가져온 것 */
+  width: 940px;
+  margin: 0 auto;
+  
+  
+  
+}
+
+/* 헤더 */
+.header {
+  /* 이런 식의 yellow같은 색 지정은 구분을 하기 위한 */
+  /* 노란색은 헤더 영역이다 이런 식 */
+  background-color: yellow;
+  /* 10vh = 10%  */
+  height: 10vh; 
+  
+}
+/* 비주얼 */
+.visual{
+  
+  background-color: orange;
+  /* 10vh = 10%  */
+  height: 10vh; 
+  
+}
+
+/* main */
+.main{
+ 
+  background-color: blue;
+  /* 10vh = 10%  */
+  height: 60vh; 
+
+  /* 이 메인 요소는 플렉스 박스에서 플렉스 컨테이너가 된다 */
+  display: flex;
+  /* row설정이기 때문에 x축 방향으로  */
+  flex-direction: row;
+  /* justify-content : 메인축 정렬, center 사용으로 가운데 위치시킬 수 있다. space-between : 사이 사이에 간격을 준다. space-around : gutter 크기의 절반만큼을 좌 우에 배치시킨다. space-evenly : 균등하게 여백이 배분되는 설정  */
+  justify-content: space-evenly;
+
+  padding: 30px 0;
+  
+}
+
+.group1 {
+  background-color: skyblue;
+  width: 250px;
+  
+}
+.group2 {
+  background-color: skyblue;
+  width: 380px;
+
+}
+.group3 {
+  background-color: skyblue;
+  width: 190px;
+
+}
+/* slogan */
+.slogan{
+ 
+  background-color: lime;
+  /* 10vh = 10%  */
+  height: 10vh; 
+  
+}
+/* footer */
+
+
+.footer-bg {
+  background-color: purple;
+}
+
+.footer{
+ 
+  background-color: pink;
+  /* 10vh = 10%  */
+  height: 10vh; 
+  
+}
+
