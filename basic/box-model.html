@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>박스모델</title>
+  <style>
+
+    .content-box{
+      background: yellow;
+      width: 500px;
+      height: 300px;
+
+      /* border: 10px solid blue; -> 해당 속성이 개별속성이 아니라 단축속성이다 */
+      border: 10px solid blue;
+      /* 여기까지 520px width 에 320px height */
+
+      /* 3개 값이 들어가면 위 - 좌우 - 아래 이런 식으로 대입된다 */
+      padding: 20px 50px 30px;
+
+      /* 계속 위드와 하이트 값을 더해 총 크기를 보자 */
+
+      margin: 50px;
+      /* 이제는 width가 720px가 된다 */
+      
+      box-sizing: content-box;
+
+    }
+
+    /* 두가지의 차이점은? */
+    /* 모바일 웹사이트 등을 제작할 때 유용하게 사용가능 */
+    /* 위드에 패딩이 포함되서 계산하기 위한 보더박스는 모바일을 위해(모바일은 가로스크롤이 없기 때문에) 많이 사용된다 */
+    /* 마진 변합 현상이 일어난다 - 마진 자체가 가지고 있는 특수성, 버그 아님. 등간격으로 레이아웃을 설정하기 위해서는 마진에 값을 줄 수 있다 */
+    /* 상황에 따라 패딩과 마진을 잘 사용해야 한다 */
+
+    .border-box{
+      background: pink;
+      width: 500px;
+      height: 300px;
+
+      /* border: 10px solid blue; -> 해당 속성이 개별속성이 아니라 단축속성이다 */
+      border: 10px solid blue;
+      /* 여기까지 520px width 에 320px height */
+
+      /* 3개 값이 들어가면 위 - 좌우 - 아래 이런 식으로 대입된다 */
+      padding: 20px 50px 30px;
+
+      /* 계속 위드와 하이트 값을 더해 총 크기를 보자 */
+
+      margin: 50px;
+      /* 이제는 width가 720px가 된다 */
+      
+      box-sizing: border-box;
+      
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="content-box">콘텐츠 박스</div>
+  <div class="border-box">보더 박스</div>
+  
+</body>
+</html>

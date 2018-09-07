@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>플렉스 박스</title>
+  <style>
+  
+  .container{
+    background: yellow;
+    /* 마진에 값을 주면 투명하기 때문에 색이 보이지 않을 것. 그래서 패딩에 값을 줘서 분간 */
+    padding: 10px 0;
+    display: flex;
+    /* flex-direction의 기본 값은 row - 이 때 위드 값은 콘텐츠 크기만큼, 하이트는 부모만큼 스트레치 된다. cloumn일 때는 그 반대 */
+    flex-direction: row;
+    height: 200px;
+    /* 부모가 아이템보다 클 때 정렬되는 방식이 다르다 */
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 600px;
+
+    /* 이제 위드 값을 초과하면 밑으로 보내버린다 */
+    flex-wrap: wrap;
+
+    align-content: space-between;
+  }
+  
+  /* 컨테이너 클래스 안에 있는 div를 선택하려고 할 때 */
+  /* 플렉스 아이템이기 때문에 부모의 영역만큼 스트레치 된다  */
+
+  /* 만약 글자를 가운데 정렬하고 싶으면 플렉스 아이템들을 플렉스 컨테이너로 만들어서 박스1~4를 아이템으로 만든다. 그리고서 교차축 정렬(위에 위치해있던 글자가 align-items:center 사용하여 가운데로 오게 한다 - 교차축의 이동) */
+  /* 누군가의 아이템이면서 컨테이너가 동시에 될 수 있다 */
+
+  /* 플렉스 아이템에게 order을 줄 수 있다. 기본 오더는 0. 같은 0일 때는 마크업 순서대로 반영. */
+
+  /* 콘테이너 띄고 디브는 그 안의 자식을 가리킬 때 */
+  .container div{
+    background: pink;
+    display: flex;
+    align-items: center;
+    width: 250px;
+  }
+  /* 선택자 CSS 우선순위 규칙 때문에 라임 값이 먹지 않음
+  하지만 이를 무시하려면 !important를 설정해 주면 된다. 하지만 사용할 때는 꼭 필요에 의해서만 사용해야 된다. 남발하면 안된다!!! */
+  .box4 {
+    background: lime !important;
+    order: -1;
+    flex-shrink: 3;
+  }
+
+  /* 그래서 임포턴트를 쓰지 않고 div.box1(부모의 파워보다 세게 하기 위해) 에 색을 설정  */
+  div.box1{
+    background: orange;
+    /* 오더 순서는 -1 0 1 */
+    order: 1;
+
+    /* grow 디폴트 값은 0 */
+    /* shirnk 디폴트 값은 1 */
+    flex-shrink: 2;
+    
+
+  }
+
+  div.box2{
+    background: skyblue;
+    align-self: center;
+
+  }
+
+
+  
+  </style>
+</head>
+<body>
+  
+
+
+  <div class="container">
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+  </div>
+
+
+
+
+</body>
+</html>

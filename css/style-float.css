@@ -1,3 +1,4 @@
+
 /* CSS를 활용한 레이아웃 및 UI 디자인 */
 body{
   margin: 0;
@@ -7,10 +8,17 @@ h1, h2, h3, h4, h5, h6{
   font-weight: normal;
   margin: 0;
 }
+/* float 이슈를 해결하기 위한 CSS 코드 */
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /* 레이아웃 */
 .container{
   background-color: #aaa;
-  
+  height: 100vh;
 }
 .header, .visual, .main, .slogan, .footer{
   width: 940px;
@@ -19,17 +27,8 @@ h1, h2, h3, h4, h5, h6{
 /* 헤더 */
 .header{
   background-color: yellow;
-  position: relative;
-  
+  height: 10vh;
 }
-/* 로고 */
-.logo{
- 
-  position: absolute;
-  top: 50px;
-  left: 65px;
-}
-
 /* 비주얼 */
 .visual{
   background-color: orange;
@@ -38,28 +37,35 @@ h1, h2, h3, h4, h5, h6{
 /* 메인 */
 .main{
   background-color: blue;
-  height: 60vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding: 30px 0;
+  /* height: 60vh; */
+  /* overflow: hidden; */
+}
+.main div{
+  height: 100px;
 }
 .group1{
-  background-color: skyblue;
+  background-color: yellow;
   width: 250px;
+  float: left;
+  position: relative;
+  left: -50px;
 }
 .group2{
-  background-color: skyblue;
+  background-color: teal;
   width: 380px;
+  float: left;
 }
 .group3{
-  background-color: skyblue;
+  background-color: pink;
   width: 190px;
+  float: left;
 }
+
 /* 슬로건 */
 .slogan{
   background-color: lime;
   height: 10vh;
+  margin-top: 50px;
 }
 /* 푸터 */
 .footer-bg{
