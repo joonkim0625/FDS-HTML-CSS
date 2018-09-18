@@ -2,8 +2,14 @@
 
 var item = $('.menu-item');
 var subItem = $('.sub-menu a');
-item.attr('tabindex', 0);
+var tab = $('.tab');
+var list = $('.related-list');
+
+// 메인 메뉴 제어를 위한 함수
+item.attr('tabindex', '0');
 subItem.attr('class', 'fas fa-angle-left');
+
+tab.attr('tabindex', '0');
 
 // .on => 멀티 이벤트를 가능케 함
  item.on('mouseover focusin', function(){
@@ -14,3 +20,24 @@ subItem.attr('class', 'fas fa-angle-left');
  subItem.hover(function(){
    $(this).toggleClass('fa-angle-right');
  });
+
+//  탭 메뉴 제어를 위한 함수
+tab.on('click focusin', function(){
+  $(this).parent().siblings().removeClass();
+  $(this).parent().addClass('tab-act');
+
+});
+
+
+// list.hover(function(){
+//   $(this).toggleClass('related-act');
+// });
+
+// 관련 사이트 목록 애니메이션을 위한 함수
+list.on('mouseover focusin', function(){
+  $(this).addClass('related-act');
+});
+
+list.on('mouseout focusout', function(){
+  $(this).removeClass('related-act');
+});
