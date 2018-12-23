@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-Kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>반응형 비디오</title>
+  <style>
+
+    body {
+      margin: 0;
+    }
+
+    .rwd-container  {
+      width: 50%;
+      background: yellow;
+    }
+   
+    .rwd-video  {
+      width: 100%;
+      height: auto;
+    }
+
+    
+  
+    
+  </style>
+</head>
+<body>
+  <div class="rwd-container">
+    <video class="rwd-video" autoplay controls poster="../media/poster.jpg" muted>
+      <source src="../media/stories.mp4">
+      <track src="../media/google-developer-stories-subtitles-en.vtt" kind="captions" srclang="en" label="english">
+    </video>
+  </div>
+</body>
+</html>
